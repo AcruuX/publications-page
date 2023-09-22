@@ -1,0 +1,28 @@
+<div class="publications__item">
+	<div class="container">
+		{% if fields.field_cover_image %}
+			<div class="publication__image">
+				{{ fields.field_cover_image.content }}
+			</div>
+		{% endif %}
+		<div class="publication__content">
+			<div class="content__category">
+				<i class="ri-send-plane-fill"></i>
+				{{ fields.field_content_category.content }}</div>
+			<div class="content__title">
+				<h3>{{ fields.title.content }}</h3>
+			</div>
+			<div class="publication__body">{{ fields.body.content }}</div>
+			<div class="publication__languages">
+				{% if fields.field_language.content %}
+					{{ fields.field_language.content }}
+				{% endif %}
+				</div>
+			</div>
+			<div class="publication__right">
+				<div class="date">
+					<i class="ri-send-plane-2-fill"></i>
+					{{ fields.field_published_date.content }}</div>
+			</div>
+		</div>
+	</div>

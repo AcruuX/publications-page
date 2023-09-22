@@ -1,0 +1,12 @@
+name: custom
+type: theme
+description: 'custom theme for Publications page'
+core: 8.x
+core_version_requirement: ^8 || ^9
+base theme: stable9
+regions:
+  header: 'Header'
+  content: 'Content'
+  footer: 'Footer'
+libraries:
+  - theme_custom/theming_global

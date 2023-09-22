@@ -1,0 +1,14 @@
+{% if content.field_thumbnail_url  %}
+	{% set url = content.field_thumbnail_url[0]['#url'] %}
+{% endif %}
+{% if content.field_thumbnail_url and content.field_thumbnail_image.0 %}
+	<a href="{{ url }}" class="linked test">
+		<img src="{{ content.field_thumbnail_image.0 }}"/>
+	</a>
+  {% elseif content.field_thumbnail_url %}
+    <a href="{{ url }}" class="nonlinked"></a>
+  {% else %}
+    <img src="{{ content.field_thumbnail_image.0 }}"/>
+{% endif %}
+
+
